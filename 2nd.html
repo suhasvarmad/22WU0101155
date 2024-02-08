@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check if a number is a multiple of 3 or 7</title>
+    <style>
+        #output {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>3's and 7's</h1>
+    <label for="numberInput">Enter a positive number:</label>
+    <input type="number" id="numberInput">
+    <button onclick="checkNumber()">Check</button>
+    <div id="output"></div>
+
+    <script>
+        function isMultipleOfThreeOrSeven(number) {
+            if (number <= 0) {
+                return false; // Not a positive number
+            }
+
+            return number % 3 === 0 && number % 7 === 0;
+        }
+
+        function checkNumber() {
+            const number = parseInt(document.getElementById('numberInput').value);
+            if (isNaN(number)) {
+                document.getElementById('output').innerText = "Please enter a valid number.";
+                return;
+            }
+
+            let outputText = "";
+            if (number % 3 === 0 && number % 7 === 0) {
+                outputText = number + " is a multiple of both 3 and 7.";
+            } else if (number % 3 === 0) {
+                outputText = number + " is a multiple of 3.";
+            } else if (number % 7 === 0) {
+                outputText = number + " is a multiple of 7.";
+            } else {
+                outputText = number + " is not a multiple of 3 or 7.";
+            }
+
+            document.getElementById('output').innerText = outputText;
+        }
+    </script>
+</body>
+</html>
