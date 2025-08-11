@@ -31,7 +31,7 @@ The application allows users to shorten up to five URLs concurrently, view a lis
 ## Technologies Used
 
 -   **Backend:** Node.js, Express.js
--   **Frontend:** React, Material UI (MUI), Axios, React Router
+-   **Frontend:** React, Material UI (MUI), React Router
 -   **Version Control:** Git & GitHub
 
 ## How to Run Locally
